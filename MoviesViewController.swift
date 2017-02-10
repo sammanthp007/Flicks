@@ -88,6 +88,9 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         cell.titleLabel.text = title
         cell.overviewLabel.text = overview
         
+        // for fitting in the content
+        cell.titleLabel.sizeToFit()
+        
         
         print("row \(indexPath.row)")
         

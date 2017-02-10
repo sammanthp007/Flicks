@@ -32,6 +32,7 @@ class DetailViewController: UIViewController {
         overviewLabel.text = overview
         
         // for wrapping the size of the box as per the dynamic text
+        titleLabel.sizeToFit()
         overviewLabel.sizeToFit()
         
         let poster_base_url = "https://image.tmdb.org/t/p/w342"

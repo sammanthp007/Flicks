@@ -45,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // initialize a tabbar and set the default
         let moviesTabBarController = UITabBarController()
         // list all the viewControllers
-        moviesTabBarController.viewControllers = [nowPlayingViewController, topRatedViewController]
+        moviesTabBarController.viewControllers = [nowPlayingNavigationController, topRatedNavigationController]
         // start the window with a root view
         window?.rootViewController = moviesTabBarController
         window?.makeKeyAndVisible()

@@ -16,6 +16,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Here we will go through all the things that our app will need to do after launching
+        // To reference our window
+        window = UIWindow(frame: UIScreen.main.bounds)
+        
+        // storyboard = Blueprint for how to build your app, so reference it; Main is the default that was built
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        // build a navigation controller
+        let nowPlayingNavigationController = storyboard.instantiateViewController(withIdentifier: "MoviesNavigationController") as! UINavigationController
+        
+        // set the top view controller as MoviesViewController
+        let nowPlayingViewController = nowPlayingNavigationController.topViewController as! MoviesViewController
+        
+        // set the endpoint class variable as required
+        nowPlayingViewController.endpoint = "now_playing"
+        
+        // for the top rated tab, create a navigation controller, view controller, and an endpoint
+        let topRatedNavigationController = storyboard.instantiateViewController(withIdentifier: "MoviesNavigationController") as! UINavigationController
+        let topRatedViewController = topRatedNavigationController.topViewController as! MoviesViewController
+        topRatedViewController.endpoint = "top_rated"
+        
+        // initialize a tabbar and set the default
+        let moviesTabBarController = UITabBarController()
+        // list all the viewControllers
+        moviesTabBarController.viewControllers = [nowPlayingViewController, topRatedViewController]
+        // start the window with a root view
+        window?.rootViewController = moviesTabBarController
+        window?.makeKeyAndVisible()
+        
+        
+        
+        
         return true
     }
 

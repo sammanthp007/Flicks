@@ -184,7 +184,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         let indexPath = tableView.indexPath(for: cell)
         
         // get the movie
-        let movie = self.movies![(indexPath!.row)]
+        let movie = self.filteredData![(indexPath!.row)]
         
         // get the detail view controller we segue to
         let detailViewControl = segue.destination as! DetailViewController

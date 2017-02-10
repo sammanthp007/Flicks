@@ -27,6 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // build a navigation controller
         let nowPlayingNavigationController = storyboard.instantiateViewController(withIdentifier: "MoviesNavigationController") as! UINavigationController
         nowPlayingNavigationController.tabBarItem.title = "Now Playing"
+        nowPlayingNavigationController.tabBarItem.image = #imageLiteral(resourceName: "now_playing")
         
         // set the top view controller as MoviesViewController
         let nowPlayingViewController = nowPlayingNavigationController.topViewController as! MoviesViewController
@@ -37,6 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // for the top rated tab, create a navigation controller, view controller, and an endpoint
         let topRatedNavigationController = storyboard.instantiateViewController(withIdentifier: "MoviesNavigationController") as! UINavigationController
         topRatedNavigationController.tabBarItem.title = "Top Rated"
+        topRatedNavigationController.tabBarItem.image = #imageLiteral(resourceName: "top_rated")
         let topRatedViewController = topRatedNavigationController.topViewController as! MoviesViewController
         topRatedViewController.endpoint = "top_rated"
         

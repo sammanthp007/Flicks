@@ -86,12 +86,13 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
             cell.posterView.setImageWith(poster_url as! URL)
         }
         
-        
+        cell.backgroundColor = UIColor .orange
         cell.titleLabel.text = title
         cell.overviewLabel.text = overview
         
         // for fitting in the content
         cell.titleLabel.sizeToFit()
+        cell.selectionStyle = .none
         
         
         print("row \(indexPath.row)")

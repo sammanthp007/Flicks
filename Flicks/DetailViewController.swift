@@ -13,12 +13,16 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var overviewLabel: UILabel!
+    @IBOutlet weak var infoView: UIView!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var textDetailView: UIView!
     
     var movie: NSDictionary!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(movie)
+        
+        scrollView.contentSize = CGSize(width: scrollView.frame.size.width, height: textDetailView.frame.origin.y + textDetailView.frame.size.height)
         
         let title = movie["title"] as! String
         

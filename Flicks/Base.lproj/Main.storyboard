@@ -82,16 +82,16 @@
                                 <rect key="frame" x="5" y="0.0" width="370" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="P0w-Xa-Qhe">
-                                        <rect key="frame" x="-3" y="-64" width="375" height="667"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="P0w-Xa-Qhe">
+                                        <rect key="frame" x="0.0" y="-62" width="375" height="666"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <view alpha="0.80000000000000004" contentMode="scaleToFill" id="MxL-ka-f5I">
-                                        <rect key="frame" x="-3" y="110" width="375" height="318"/>
+                                    <view alpha="0.80000000000000004" contentMode="scaleToFill" misplaced="YES" id="MxL-ka-f5I">
+                                        <rect key="frame" x="-3" y="607" width="375" height="318"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PD5-ue-jVX">
-                                                <rect key="frame" x="8" y="20" width="359" height="26"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PD5-ue-jVX">
+                                                <rect key="frame" x="8" y="0.0" width="359" height="26"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -114,8 +114,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="9wr-wm-FAW"/>
                     <connections>
+                        <outlet property="infoView" destination="MxL-ka-f5I" id="4QY-KF-ngk"/>
                         <outlet property="overviewLabel" destination="2LY-K3-fcb" id="cLf-iY-j0F"/>
                         <outlet property="posterImageView" destination="P0w-Xa-Qhe" id="fRL-k7-T1T"/>
+                        <outlet property="scrollView" destination="Wa9-YB-dZw" id="CKi-ir-0ON"/>
+                        <outlet property="textDetailView" destination="MxL-ka-f5I" id="Tld-wJ-9Pw"/>
                         <outlet property="titleLabel" destination="PD5-ue-jVX" id="ZfX-tm-3yM"/>
                     </connections>
                 </viewController>
